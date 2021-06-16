@@ -942,12 +942,12 @@ export type Transformer = {|
  * Used to control a traversal
  * @section bundler
  */
-export interface TraversalActions {
+export type TraversalActions = {|
   /** Skip the current node's children and continue the traversal if there are other nodes in the queue. */
-  skipChildren(): void;
+  skipChildren(): void,
   /** Stop the traversal */
-  stop(): void;
-}
+  stop(): void,
+|};
 
 /**
  * Essentially GraphTraversalCallback, but allows adding specific node enter and exit callbacks.
@@ -1583,6 +1583,6 @@ export interface IDisposable {
   dispose(): mixed;
 }
 
-export interface AsyncSubscription {
-  unsubscribe(): Promise<mixed>;
-}
+export type AsyncSubscription = {|
+  unsubscribe(): Promise<mixed>,
+|};
